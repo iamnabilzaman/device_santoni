@@ -509,7 +509,8 @@ PRODUCT_COPY_FILES += \
 
 # XiaomiParts
 PRODUCT_PACKAGES += \
-    XiaomiParts
+    XiaomiParts \
+    Dirac
 
 # Do not spin up a separate process for the network stack, use an in-process APK.
 PRODUCT_PACKAGES += InProcessNetworkStack
