@@ -71,3 +71,6 @@
 
 # Mac
 /vendor/bin/nv_mac                      u:object_r:wcnss_service_exec:s0
+
+# WiFi Display
+/(system_ext|system/system_ext)/bin/wfdservice                    u:object_r:wfdservice_exec:s0
