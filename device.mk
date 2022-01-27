@@ -202,11 +202,16 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8937 \
     memtrack.msm8937 \
     libdisplayconfig \
+    libdisplayconfig.vendor \
+    libdisplayconfig.qti \
     libvulkan \
     libqdMetaData \
+    libqdMetaData.system \
+    libqdMetaData.vendor \
     liboverlay \
     libtinyxml \
-    vendor.display.config@1.0.vendor
+    vendor.display.config@1.0.vendor \
+    vendor.display.config@2.0
 
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.allocator-service \
@@ -393,7 +398,8 @@ PRODUCT_COPY_FILES += \
 
 # Privapp Whitelist
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/permissions/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml
+    $(LOCAL_PATH)/configs/permissions/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml \
+    $(LOCAL_PATH)/configs/permissions/system-privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml
 
 # QMI
 PRODUCT_PACKAGES += \
@@ -509,6 +515,15 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
     $(LOCAL_PATH)/configs/wifi/WCNSS_cfg.dat:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/wlan/prima/WCNSS_cfg.dat \
     $(LOCAL_PATH)/configs/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
+
+# Wi-Fi Display
+PRODUCT_BOOT_JARS += \
+    WfdCommon
+
+PRODUCT_PACKAGES += \
+    libnl \
+    libwfdaac_vendor \
+    WfdCommon
 
 # XiaomiParts
 PRODUCT_PACKAGES += \
