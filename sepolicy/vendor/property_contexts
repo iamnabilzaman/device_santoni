@@ -29,9 +29,6 @@ vendor.target.init.complete     u:object_r:vendor_init_prop:s0
 persist.ims.regmanager.mode     u:object_r:vendor_imsradio_prop:s0
 persist.radio.psensor.rawdata   u:object_r:persist_sensors_radio_prop:s0
 
-# WFD
-vendor.wfdservice               u:object_r:vendor_wfd_prop:s0
-
 # WiFi
 vendor.wlan.                    u:object_r:vendor_wifi_prop:s0
 wifi.active.interface           u:object_r:wifi_prop:s0
